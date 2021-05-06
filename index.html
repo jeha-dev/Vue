@@ -33,7 +33,14 @@
             methods: {
                 nextYear: function(){
                     return this.person.name + ' 는 내년에' + (this.person.age+1) + '살 입니다';
+                    // this = el, data, methods들
+                },
+                otherMethod: function(){
+                    this.nextYear();
                 }
+                // 동등함수들은 서로를 서로의 안에서 사용가능
+                // this는 methods를 의미
+                // methods의 nextYear를 otherMethod에 넣겠다는 의미
             }
         });
 
