@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>뷰 1강~</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    Hello world
+
+    <div id="app">
+        {{name}}
+    </div>
+    <script>
+        /*
+        기본 함수
+        new Vue({
+            el: "#app"`
+        });
+        */
+
+        new Vue({
+            el: "#app",
+            data: {
+                name : '코지코더' 
+            }
+        });
+
+
+    </script>
+</body>
+</html>
