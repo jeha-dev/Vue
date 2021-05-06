@@ -11,7 +11,8 @@
     Hello world
 
     <div id="app">
-        {{name}} {{age}}
+        {{nextYear()}}
+        <!-- 함수이기 때문에 괄호를 포함해서 넣어줘야함 -->
     </div>
     <script>
         /*
@@ -24,8 +25,15 @@
         new Vue({
             el: "#app",
             data: {
-                name : '코지코더',
-                age: 34
+                person: {
+                    name : '코지코더',
+                    age: 34
+                }
+            },
+            methods: {
+                nextYear: function(){
+                    return this.person.name + ' 는 내년에' + (this.person.age+1) + '살 입니다';
+                }
             }
         });
 
