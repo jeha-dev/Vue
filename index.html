@@ -11,14 +11,14 @@
     Hello world
 
     <div id="app">
-        {{nextYear()}}
+        {{nextYear('안녕요')}}
         <!-- 함수이기 때문에 괄호를 포함해서 넣어줘야함 -->
     </div>
     <script>
         /*
         기본 함수
         new Vue({
-            el: "#app"`
+            el: "#app"
         });
         */
 
@@ -31,8 +31,10 @@
                 }
             },
             methods: {
-                nextYear: function(){
-                    return this.person.name + ' 는 내년에' + (this.person.age+1) + '살 입니다';
+                // div안의 안녕요가 nextYear function에 매개변수로 들어가서 return할 때 이용되어 뷰포트에 표출됩니다
+                // 이 때 안녕요 == 인자(argument) greeting == 매개변수(parameter)
+                nextYear: function(greeting){
+                    return greeting + '! ' + this.person.name + ' 는 내년에' + (this.person.age+1) + '살 입니다';
                     // this = el, data, methods들
                 },
                 otherMethod: function(){
