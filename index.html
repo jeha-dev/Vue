@@ -33,9 +33,12 @@
             methods: {
                 // div안의 안녕요가 nextYear function에 매개변수로 들어가서 return할 때 이용되어 뷰포트에 표출됩니다
                 // 이 때 안녕요 == 인자(argument) greeting == 매개변수(parameter)
-                nextYear: function(greeting){
+                nextYear(greeting){
                     return greeting + '! ' + this.person.name + ' 는 내년에' + (this.person.age+1) + '살 입니다';
                     // this = el, data, methods들
+
+                    // 함수를 줄여서 작성 가능
+                    // 원본 : variable: function(){} -> variable(){}
                 },
                 otherMethod: function(){
                     this.nextYear();
